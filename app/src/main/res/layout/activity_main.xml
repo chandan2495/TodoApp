@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/abc_action_bar_default_padding_material"
+    android:id="@+id/mainlayout"
+    android:background="#E0F2F1">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/pager_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp" />
+    </android.support.v4.view.ViewPager>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:hint="Add todo item here"
+        android:layout_toStartOf="@+id/additem1"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Item"
+        android:id="@+id/additem1"
+        android:layout_alignTop="@+id/editText1"
+        android:layout_alignParentEnd="true"
+        android:onClick="addItem"
+        android:background="#009688"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="@dimen/listview_top_margin"
+        android:layout_above="@+id/editText1"/>
+</RelativeLayout>
